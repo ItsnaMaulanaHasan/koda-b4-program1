@@ -1,3 +1,4 @@
+import { showHistory } from "./lib/history.js";
 import { input } from "./lib/interfaceInput.js";
 import { pilihKendaraan } from "./lib/kendaraan.js";
 import { listSewa } from "./lib/keranjang.js";
@@ -22,10 +23,10 @@ const main = async () => {
         await listSewa();
         break;
       case "3":
-        console.log("History Sewa");
+        await showHistory();
         break;
       case "4":
-        console.log("Keluar");
+        loop = false;
         break;
       default:
         await input("\n ⚠️ Input tidak sesuai yang diharapkan");
