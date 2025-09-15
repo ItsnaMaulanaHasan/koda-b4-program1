@@ -14,16 +14,16 @@ const main = async () => {
     const inputMenu = await input("Masukkan nomor menu: ");
 
     switch (inputMenu) {
-      case 1:
+      case "1":
         await pilihKendaraan();
         break;
-      case 2:
+      case "2":
         console.log("List Sewa");
         break;
-      case 3:
+      case "3":
         console.log("History Sewa");
         break;
-      case 4:
+      case "4":
         console.log("Keluar");
         break;
       default:
