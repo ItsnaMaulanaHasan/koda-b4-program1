@@ -1,4 +1,4 @@
-import { showHistory, history } from "./lib/history.js";
+import { lihatHistory, history } from "./lib/history.js";
 import { input } from "./lib/interfaceInput.js";
 import { pilihKendaraan, daftarKendaraan } from "./lib/kendaraan.js";
 import { listSewa, keranjang } from "./lib/keranjang.js";
@@ -24,7 +24,7 @@ const main = async () => {
         await listSewa(keranjang);
         break;
       case "3":
-        await showHistory(history);
+        await lihatHistory(history);
         break;
       case "4":
         loop = await keluar(loop, keranjang, history);
