@@ -1,5 +1,6 @@
 import { input } from "./lib/interfaceInput.js";
 import { pilihKendaraan } from "./lib/kendaraan.js";
+import { listSewa } from "./lib/keranjang.js";
 
 const main = async () => {
   let loop = true;
@@ -18,7 +19,7 @@ const main = async () => {
         await pilihKendaraan();
         break;
       case "2":
-        console.log("List Sewa");
+        await listSewa();
         break;
       case "3":
         console.log("History Sewa");
