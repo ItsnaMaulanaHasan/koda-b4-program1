@@ -2,6 +2,7 @@ import { showHistory, history } from "./lib/history.js";
 import { input } from "./lib/interfaceInput.js";
 import { pilihKendaraan, daftarKendaraan } from "./lib/kendaraan.js";
 import { listSewa, keranjang } from "./lib/keranjang.js";
+import { keluar } from "./lib/keluar.js";
 
 const main = async () => {
   let loop = true;
@@ -26,7 +27,7 @@ const main = async () => {
         await showHistory(history);
         break;
       case "4":
-        loop = false;
+        loop = await keluar(loop, keranjang, history);
         break;
       default:
         await input("\n ⚠️ Input tidak sesuai yang diharapkan");
