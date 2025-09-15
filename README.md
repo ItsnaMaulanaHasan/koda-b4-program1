@@ -40,41 +40,28 @@ flowchart TD
     stop@{shape: dbl-circ, label: "Stop"}
 
     loop@{shape: rect, label: "loop = true"}
-    while@{shape: diamond, label: "loop = true"}
-    clear@{shape: rect, label: process.stdout.write("\x1Bc")}
-    menu@{shape: lean-r, label: '"\nSelamat datang di Hasan Sport Rental, silahkan pilih menu\n
-    1. Lihat Keranjang
-    2. List Sewa
-    3. History Sewa
-    4. Keluar"' }
-    inputMenu@{shape: lean-r, label: inputMenu}
-    case1@{shape: diamond, label: inputMenu = "1"}
-    case2@{shape: diamond, label: inputMenu = "2"}
-    case3@{shape: diamond, label: inputMenu = "3"}
-    case4@{shape: diamond, label: inputMenu = "4"}
+    while@{shape: diamond, label: "Selama loop = true"}
+    clear@{shape: rect, label: "Bersihkan layar"}
+    menu@{shape: lean-r, label: "Tampilkan Menu Utama"}
+    inputMenu@{shape: lean-r, label: "Input Pilihan Menu"}
+    case1@{shape: diamond, label: "Menu = 1"}
+    case2@{shape: diamond, label: "Menu = 2"}
+    case3@{shape: diamond, label: "Menu = 3"}
+    case4@{shape: diamond, label: "Menu = 4"}
 
-    pilihKendaraan@{shape: rect, label: await pilihKendaraan()}
-    listSewa@{shape: rect, label: await listSewa()}
-    showHistory@{shape: rect, label: await showHistory()}
-    false@{shape: rect, label: loop = false}
+    pilihKendaraan@{shape: rect, label: "Lihat & Pilih Kendaraan"}
+    listSewa@{shape: rect, label: "Lihat List Sewa"}
+    lihatHistory@{shape: rect, label: "Lihat History Sewa"}
+    keluar@{shape: rect, label: "Proses Keluar"}
 
-    break1@{shape: rect, label: break}
-    break2@{shape: rect, label: break}
-    break3@{shape: rect, label: break}
-    break4@{shape: rect, label: break}
-    break5@{shape: rect, label: break}
-
-    outputWarning@{shape: lean-r, label: '"\n ⚠️ Input tidak sesuai yang diharapkan"'}
-    inputWarning@{shape: lean-r, label: Click Enter}
+    outputWarning@{shape: lean-r, label: "⚠️ Input tidak sesuai"}
 
     start --> loop --> while -- true --> clear --> menu --> inputMenu --> case1
-    case1 -- true --> pilihKendaraan --> break1 --> while
-    case1  -- false --> case2 -- true --> listSewa --> break2 --> while
-    case2 -- false --> case3 --> true --> showHistory --> break3 --> while
-    case3 -- false --> case4 -- true --> false --> break4 --> while
-    case4 -- false --> outputWarning --> inputWarning --> break5 -->  while
+    case1 -- true --> pilihKendaraan --> while
+    case1 -- false --> case2 -- true --> listSewa --> while
+    case2 -- false --> case3 -- true --> lihatHistory --> while
+    case3 -- false --> case4 -- true --> keluar --> while
+    case4 -- false --> outputWarning --> while
 
     while -- false --> stop
-
-
 ```
