@@ -1,10 +1,10 @@
-# Aplikasi Pemesanan Makanan Mixue (CLI)
+# 🚗 Aplikasi Penyewaan Kendaraan Hasan Sport Rental (CLI)
 
 Ini adalah aplikasi Penyewaan Kendaraan berbasis CLI (Command-Line Interface) sederhana untuk mensimulasikan proses rental kendaraan di Hasan Sport Rental.
 
 Aplikasi ini dibangun menggunakan Node.js dan memungkinkan pengguna untuk melihat daftar kendaraan, memilih kendaraan yang ingin disewa, menambahkannya ke list sewa, melakukan sewa kendaraan, dan melihat riwayat penyewaan.
 
-## Fitur Utama
+## ✨ Fitur Utama
 
 Aplikasi ini memiliki beberapa fitur inti:
 
