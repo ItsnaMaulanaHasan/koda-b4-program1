@@ -1,7 +1,7 @@
-import { showHistory } from "./lib/history.js";
+import { showHistory, history } from "./lib/history.js";
 import { input } from "./lib/interfaceInput.js";
-import { pilihKendaraan } from "./lib/kendaraan.js";
-import { listSewa } from "./lib/keranjang.js";
+import { pilihKendaraan, daftarKendaraan } from "./lib/kendaraan.js";
+import { listSewa, keranjang } from "./lib/keranjang.js";
 
 const main = async () => {
   let loop = true;
@@ -17,13 +17,13 @@ const main = async () => {
 
     switch (inputMenu) {
       case "1":
-        await pilihKendaraan();
+        await pilihKendaraan(daftarKendaraan);
         break;
       case "2":
-        await listSewa();
+        await listSewa(keranjang);
         break;
       case "3":
-        await showHistory();
+        await showHistory(history);
         break;
       case "4":
         loop = false;
