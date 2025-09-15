@@ -1,4 +1,4 @@
-import { input } from "./interfaceInput.js";
+import { input } from "./lib/interfaceInput.js";
 import { pilihKendaraan } from "./lib/kendaraan.js";
 
 const main = async () => {
