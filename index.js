@@ -5,7 +5,7 @@ const main = async () => {
   while (loop) {
     process.stdout.write("\x1Bc");
     console.log("\nSilahkan pilih menu\n");
-    console.log("1. Lihat Film");
+    console.log("1. Lihat Kendaraan Sewa");
     console.log("2. Lihat Keranjang");
     console.log("3. Lihat History");
     console.log("4. Keluar\n");
@@ -14,13 +14,13 @@ const main = async () => {
 
     switch (inputMenu) {
       case 1:
-        console.log("Lihat Film");
+        console.log("Lihat Kendaraan Sewa");
         break;
       case 2:
         console.log("Lihat Keranjang");
         break;
       case 3:
-        console.log("Lihat History");
+        console.log("Lihat History Pemesanan");
         break;
       case 4:
         console.log("Keluar");
